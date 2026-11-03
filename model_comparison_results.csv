@@ -1,0 +1,3 @@
+Model,Evaluation Cases,Hits,Hit Rate@5 (%)
+Frequency-based baseline,762,555,72.83
+Skill co-occurrence,762,569,74.67
