@@ -139,7 +139,7 @@ st.caption(
 
 # Project paths
 BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = BASE_DIR / "data" / "data_science_job_posts_2025.csv"
+DATA_PATH = BASE_DIR / "data_science_job_posts_2025.csv"
 MODEL_PATH = BASE_DIR / "models" / "skill_model.joblib"
 VECTORIZER_PATH = BASE_DIR / "models" / "tfidf_vectorizer.joblib"
 LABELS_PATH = BASE_DIR / "models" / "skill_labels.joblib"
