@@ -581,15 +581,23 @@ st.header("📊 Model Evaluation & Comparison")
 
 comparison_path = BASE_DIR / "model_comparison_results.csv"
 
+st.subheader("📊 Model Evaluation & Comparison")
 
 if comparison_path.exists():
     comparison_df = pd.read_csv(comparison_path)
+
     st.subheader("📈 Performance Comparison")
     st.dataframe(comparison_df, use_container_width=True)
 
     if "Model" in comparison_df.columns and "Hit Rate@5 (%)" in comparison_df.columns:
         chart_df = comparison_df.set_index("Model")[["Hit Rate@5 (%)"]]
         st.bar_chart(chart_df)
+
+else:
+    st.info(
+        "Model comparison results are not available yet. "
+        "Model evaluation can be added after generating the evaluation results."
+    )
 
     st.caption(
         "Hit Rate@5 measures how often a hidden skill appeared in the "
